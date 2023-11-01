@@ -29,6 +29,13 @@ navLinks.forEach((link) => {
 });
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+const header = document.getElementById("header");
+const headerAction = () => {
+  window.scrollY > 50
+    ? header.classList.add("bg__header")
+    : header.classList.remove("bg__header");
+};
+window.addEventListener("scroll", headerAction);
 
 /*=============== POPULAR SWIPER ===============*/
 

@@ -110,6 +110,26 @@ img {
   overflow: hidden;
 }
 
+.shape {
+  background-color: hsla(219, 33%, 32%, 0.5);
+  filter: blur(112px);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.shape__big {
+  width: 400px;
+  height: 400px;
+}
+
+.shape__small {
+  width: 300px;
+  height: 300px;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
@@ -212,13 +232,166 @@ img {
 }
 
 /* Change background header */
+.bg__header {
+  border-radius: 0 0 1rem 1rem;
+  -webkit-border-radius: 0 0 1rem 1rem;
+  -moz-border-radius: 0 0 1rem 1rem;
+  -ms-border-radius: 0 0 1rem 1rem;
+  -o-border-radius: 0 0 1rem 1rem;
+  background-color: var(--body-color);
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1);
+}
 
 /* Active link */
 
 /*=============== HOME ===============*/
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home__container {
+  position: relative;
+  padding-top: 4rem;
+  row-gap: 3rem;
+}
+
+.home__data {
+  text-align: center;
+}
+
+.home__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1rem;
+}
+
+.home__subtitle {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.home__elec {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+
+.home__elec i {
+  color: var(--first-color);
+}
+
+.home__banner {
+  width: 280px;
+  justify-self: center;
+}
+
+.home__car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.home__car-name {
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: var(--text-color-light);
+}
+
+.home__car-data {
+  text-align: center;
+}
+
+.home__car-number {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 0.25rem;
+}
+
+.home__car-icon {
+  background-color: var(--container-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 0.376rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.home__button {
+  position: relative;
+  border: 2px solid hsl(158, 89%, 30%);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  font-size: var(--small-font-size);
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.home__button::before {
+  content: "";
+  border: 2px solid hsl(158, 89%, 30%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 12px hsl(158, 89%, 30%);
+  animation: buttonGlow 3s infinite alternate-reverse;
+  -webkit-animation: buttonGlow 3s infinite alternate-reverse;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.home .shape__big,
+.home .shape__small {
+  position: absolute;
+}
+
+.home .shape__big {
+  left: -9rem;
+  top: -4rem;
+}
+
+.home .shape__small {
+  right: -10rem;
+  bottom: 3rem;
+}
 
 /* Button animate */
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 0 12px hsl(158, 89%, 30%);
+  }
 
+  100% {
+    box-shadow: 0 0 30px hsl(158, 89%, 30%);
+  }
+}
 /*=============== BUTTON ===============*/
 
 /*=============== ABOUT ===============*/
