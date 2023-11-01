@@ -61,8 +61,24 @@ let swiper = new Swiper(".popular__container", {
 });
 
 /*=============== MIXITUP FILTER FEATURED ===============*/
+let mixer = mixitup(".featured__content", {
+  selectors: {
+    target: ".featured__card",
+  },
+  animation: {
+    duration: 300,
+  },
+});
 
 /* Link active featured */
+const featuredLinks = document.querySelectorAll(".featured__item");
+
+function activeFeatured() {
+  featuredLinks.forEach((link) => link.classList.remove("active-featured"));
+  this.classList.add("active-featured");
+}
+
+featuredLinks.forEach((link) => link.addEventListener("click", activeFeatured));
 
 /*=============== SHOW SCROLL UP ===============*/
 
